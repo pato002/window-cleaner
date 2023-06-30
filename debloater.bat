@@ -63,6 +63,16 @@ sc stop "SysMain"
 :: Disable prefetch
 reg add "HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\Session Manager\Memory Management\PrefetchParameters" /v EnablePrefetcher /t REG_DWORD /d 0x00000000 /f
 
+:: Set Windows Compatibility Manager to manual start
+sc config "PcaSvc" start= demand
+
+:: Set State Repository browser monitoring service to manual start
+:: sc config "StateRepository" start= demand
+:: CURRENTLY NOT WORKING 
+
+:: Set Storage Sense to manual start
+sc config "StorSvc" start= demand
+
 :: Disable search indexing
 sc config "WSearch" start= disabled
 sc stop "WSearch"
@@ -85,6 +95,9 @@ reg delete "HKEY_CLASSES_ROOT\CLSID\{018D5C66-4533-4307-9B53-224DE2ED1FE6}" /f
 
 :: Disable getting updates asap
 reg add "HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\WindowsUpdate\UX\Settings" /v IsContinuousInnovationOptedIn /t REG_DWORD /d 0x00000000 /f
+
+:: Disable automatic update of offline maps
+reg add " HKEY_LOCAL_MACHINE\SYSTEM\Maps" /v AutoUpdateEnabled /t REG_DWORD /d 0x00000000 /f
 
 :: Disable Delivery Optimization
 reg add "HKEY_USERS\S-1-5-20\SOFTWARE\Microsoft\Windows\CurrentVersion\DeliveryOptimization\Settings" /v DownloadMode /t REG_DWORD /d 0x00000000 /f
@@ -110,6 +123,29 @@ schtasks /change /tn "\Microsoft\Windows\Autochk\Proxy" /disable
 
 :: Disable disk diagnostic data sending to Microsoft
 schtasks /change /tn "Microsoft\Windows\DiskDiagnostic\Microsoft-Windows-DiskDiagnosticDataCollector" /disable
+
+:: Disable device compatibility with Windows check
+schtasks /change /tn "Microsoft\Windows\Application Experience\Microsoft Compatibility Appraiser" /disable
+
+:: Disable telemetry on running apps and services
+schtasks /change /tn "Microsoft\Windows\Application Experience\ProgramDataUpdater" /disable
+
+:: Disable Application Impact Telemetry Agent
+schtasks /change /tn "Microsoft\Windows\Application Experience\AITAgent" /disable
+
+:: Disable automatic collection and sending of usage data
+schtasks /change /tn "Microsoft\Windows\Customer Experience Improvement Program\Consolidator" /disable
+
+:: Disable special survey system
+schtasks /change /tn "Microsoft\Windows\Feedback\Siuf\DmClient" /disable
+schtasks /change /tn "Microsoft\Windows\Feedback\Siuf\DmClientOnScenarioDownload" /disable
+
+:: Disable Queueing of reports
+schtasks /change /tn "Microsoft\Windows\Windows Error Reporting\QueueReporting" /disable
+
+:: Disable WiFi-Sense
+reg add "HKEY_LOCAL_MACHINE\Software\Microsoft\PolicyManager\default\WiFi\AllowWiFiHotSpotReporting" /v Value /t REG_DWORD /d 0x00000000 /f
+reg add "HKEY_LOCAL_MACHINE\Software\Microsoft\PolicyManager\default\WiFi\AllowAutoConnectToWiFiSenseHotspots" /v Value /t REG_DWORD /d 0x00000000 /f
 
 
 :: SETTINGS ONLY APPLIED TO THE CURRENT USER
@@ -200,4 +236,5 @@ PAUSE
 :: Many Windows forums
 :: Sophia Script for Windows https://github.com/farag2/Sophia-Script-for-Windows
 :: https://brookspeppin.com/2018/11/04/modify-local-gpo-examples/
-:: https://gist.github.com/lances101/44118a5ab320542f9591c5fa5b74ae02
+:: CTT's Windows Utility https://github.com/ChrisTitusTech/winutil
+:: Batch Got Admin script  https://gist.github.com/lances101/44118a5ab320542f9591c5fa5b74ae02
