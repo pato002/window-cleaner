@@ -17,6 +17,12 @@ Software\Policies\Microsoft\Windows\Explorer
 DisableSearchBoxSuggestions
 DWORD:1
 
+; Hide the Meet Now icon from the notification area
+User
+Software\Microsoft\Windows\CurrentVersion\Policies\Explorer
+HideSCAMeetNow
+DWORD:1
+
 ; Disable automatic sign on after restart and automatic settings after update
 Computer
 Software\Microsoft\Windows\CurrentVersion\Policies\System
@@ -292,6 +298,28 @@ DWORD:0
 Computer
 Software\Policies\Microsoft\Windows\OneDrive
 DisableFileSyncNGSC
+DWORD:1
+
+; Disable location services 
+Computer
+Software\Policies\Microsoft\Windows\LocationAndSensors
+DisableLocation
+DWORD:1
+
+Computer
+Software\Policies\Microsoft\Windows\LocationAndSensors
+DisableWindowsLocationProvider
+DWORD:1
+
+Computer
+Software\Policies\Microsoft\Windows\LocationAndSensors
+DisableSensors
+DWORD:1
+
+; Disable News and Interests on the toolbar
+Computer
+Software\Policies\Microsoft\Windows\Windows Feeds
+EnableFeeds
 DWORD:1
 
 ; Turn off clipboard history, disabled by default as it is a quite useful feature
