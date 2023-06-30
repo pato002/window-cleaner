@@ -1,0 +1,301 @@
+
+; Disable personalized ads
+User
+Software\Policies\Microsoft\Windows\CloudContent
+DisableTailoredExperiencesWithDiagnosticData
+DWORD:1
+
+; Do not suggest third-party content in Windows Spotlight
+User
+Software\Policies\Microsoft\Windows\CloudContent
+DisableThirdPartySuggestions
+DWORD:1
+
+; Disable showing suggestions to search with Bing
+User
+Software\Policies\Microsoft\Windows\Explorer
+DisableSearchBoxSuggestions
+DWORD:1
+
+; Disable automatic sign on after restart and automatic settings after update
+Computer
+Software\Microsoft\Windows\CurrentVersion\Policies\System
+DisableAutomaticRestartSignOn
+DWORD:1
+
+; Disable Delivery Optimization
+Computer
+Software\Policies\Microsoft\Windows\DeliveryOptimization
+DODownloadMode
+DWORD:99
+
+; Do not show recently added apps
+Computer
+Software\Policies\Microsoft\Windows\Explorer
+HideRecentlyAddedApps
+DWORD:1
+
+; Defer Windows Updates as much as possible for improved stability
+Computer
+Software\Policies\Microsoft\Windows\WindowsUpdate
+DeferFeatureUpdates
+DWORD:1
+
+Computer
+Software\Policies\Microsoft\Windows\WindowsUpdate
+DeferFeatureUpdatesPeriodInDays
+DWORD:365
+
+Computer
+Software\Policies\Microsoft\Windows\WindowsUpdate
+PauseFeatureUpdatesStartTime
+SZ:
+
+Computer
+Software\Policies\Microsoft\Windows\WindowsUpdate
+DeferQualityUpdates
+DWORD:1
+
+Computer
+Software\Policies\Microsoft\Windows\WindowsUpdate
+DeferQualityUpdatesPeriodInDays
+DWORD:30
+
+Computer
+Software\Policies\Microsoft\Windows\WindowsUpdate
+PauseQualityUpdatesStartTime
+SZ:
+
+; Disable Widgets
+Computer
+Software\Policies\Microsoft\Dsh
+AllowNewsAndInterests
+DWORD:0
+
+; Disable Chat icon
+Computer
+Software\Policies\Microsoft\Windows\Windows Chat
+ChatIcon
+DWORD:3
+
+; Disable AutoPlay
+Computer
+Software\Microsoft\Windows\CurrentVersion\Policies\Explorer
+NoDriveTypeAutoRun
+DWORD:1
+
+; Disable AutoRun
+Computer
+Software\Microsoft\Windows\CurrentVersion\Policies\Explorer
+NoAutoRun
+DWORD:1
+
+; Send only required diagnostic data
+Computer
+Software\Policies\Microsoft\Windows\DataCollection
+AllowTelemetry
+DWORD:1
+
+; Turn off Windows error reporting
+Computer
+Software\Policies\Microsoft\PCHealth\ErrorReporting
+DoReport
+DWORD:0
+
+Computer
+Software\Policies\Microsoft\Windows\Windows Error Reporting
+Disabled
+DWORD:1
+
+; Set feedback frequency to never
+Computer
+Software\Policies\Microsoft\Windows\DataCollection
+DoNotShowFeedbackNotifications
+DWORD:1
+
+; Disable Cortana
+Computer
+Software\Policies\Microsoft\Windows\Windows Search
+AllowCortana
+DWORD:0
+
+; Disable Cloud Search
+Computer
+Software\Policies\Microsoft\Windows\Windows Search
+AllowCloudSearch
+DWORD:0
+
+; Disable Web Search
+Computer
+Software\Policies\Microsoft\Windows\Windows Search
+ConnectedSearchUseWeb
+DWORD:0
+
+Computer
+Software\Policies\Microsoft\Windows\Windows Search
+DisableWebSearch
+DWORD:1
+
+; Only send anonymous data with Bing in Search
+Computer
+Software\Policies\Microsoft\Windows\Windows Search
+ConnectedSearchPrivacy
+DWORD:3
+
+; Disable first logon animation
+Computer
+Software\Microsoft\Windows\CurrentVersion\Policies\System
+EnableFirstLogonAnimation
+DWORD:0
+
+; Hide advertising ID from apps
+Computer
+Software\Policies\Microsoft\Windows\AdvertisingInfo
+DisabledByGroupPolicy
+DWORD:1
+
+; Some things to disable showing cloud contents from Microsoft
+Computer
+Software\Policies\Microsoft\Windows\CloudContent
+DisableCloudOptimizedContent
+DWORD:1
+
+Computer
+Software\Policies\Microsoft\Windows\CloudContent
+DisableConsumerAccountStateContent
+DWORD:1
+
+; Disable Fast Startup
+Computer
+Software\Policies\Microsoft\Windows\System
+HiberbootEnabled
+DWORD:0
+
+; Disable Xbox Game Bar
+Computer
+Software\Policies\Microsoft\Windows\GameDVR
+AllowGameDVR
+DWORD:0
+
+; Turn off Windows Customer Experience Improvement Program
+Computer
+Software\Policies\Microsoft\SQMClient\Windows
+CEIPEnable
+DWORD:0
+
+; Turn off the Windows Messenger Customer Experience Improvement Program
+Computer
+Software\Policies\Microsoft\Messenger\Client
+CEIP
+DWORD:2
+
+; Prevent participation in the Customer Experience Improvement Program in Internet Explorer
+Computer
+Software\Policies\Microsoft\Internet Explorer\SQM
+DisableCustomerImprovementProgram
+DWORD:0
+
+; Do not allow Cortana and Search to use location
+Computer
+SOFTWARE\Policies\Microsoft\Windows\Windows Search
+AllowSearchToUseLocation
+DWORD:0
+
+; Turn off Steps Recorder
+Computer
+Software\Policies\Microsoft\Windows\AppCompat
+DisableUAR
+DWORD:1
+
+; Turn off Inventory Collector
+Computer
+Software\Policies\Microsoft\Windows\AppCompat
+DisableInventory
+DWORD:1
+
+; Turn off automatic learning of handwriting
+Computer
+Software\Policies\Microsoft\InputPersonalization
+RestrictImplicitTextCollection
+DWORD:1
+
+Computer
+Software\Policies\Microsoft\InputPersonalization
+RestrictImplicitInkCollection
+DWORD:1
+
+; Turn off improve inking and typing recognition
+Computer
+Software\Microsoft\Windows\CurrentVersion\Policies\TextInput
+AllowLinguisticDataCollection
+DWORD:0
+
+; Turn off communication with support provider in Microsoft Support Diagnostic Tool
+Computer
+Software\Policies\Microsoft\Windows\ScriptedDiagnosticsProvider\Policy
+DisableQueryRemoteServer
+DWORD:0
+
+; Turn off Search Companion content file updates from internet
+Computer
+Software\Policies\Microsoft\SearchCompanion
+DisableContentFileUpdates
+DWORD:1
+
+; Disable Windows Timeline
+Computer
+Software\Policies\Microsoft\Windows\System
+EnableActivityFeed
+DWORD:0
+
+; Do not allow device name to be sent in Windows diagnostic data
+Computer
+Software\Policies\Microsoft\Windows\DataCollection
+AllowDeviceNameInTelemetry
+DWORD:0
+
+; Turn off tracking of User Activities
+Computer
+Software\Policies\Microsoft\Windows\System
+PublishUserActivities
+DWORD:0
+
+Computer
+Software\Policies\Microsoft\Windows\System
+UploadUserActivities
+DWORD:0
+
+; Turn off online speech recognition services
+Computer
+Software\Policies\Microsoft\InputPersonalization
+AllowInputPersonalization
+DWORD:0
+
+; Turn off synchronizing clipboard across devices 
+Computer
+Software\Policies\Microsoft\Windows\System
+AllowCrossDeviceClipboard
+DWORD:0
+
+; Do not sync anything
+Computer
+Software\Policies\Microsoft\Windows\SettingSync
+DisableSettingSync
+DWORD:2
+
+Computer
+Software\Policies\Microsoft\Windows\SettingSync
+DisableSettingSyncUserOverride
+DWORD:0
+
+; Prevent the use of OneDrive for file storage
+Computer
+Software\Policies\Microsoft\Windows\OneDrive
+DisableFileSyncNGSC
+DWORD:1
+
+; Turn off clipboard history, disabled by default as it is a quite useful feature
+; Computer
+; Software\Policies\Microsoft\Windows\System
+; AllowClipboardHistory
+; DWORD:0
