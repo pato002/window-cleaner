@@ -271,6 +271,84 @@ Software\Policies\Microsoft\Windows\System
 UploadUserActivities
 DWORD:0
 
+; Disable sending handwriting data to Microsoft
+Computer
+Software\Policies\Microsoft\Windows\TabletPC
+PreventHandwritingDataSharing
+DWORD:1
+
+; Disable sending of handwriting error reports
+Computer
+Software\Policies\Microsoft\Windows\HandwritingErrorReports
+PreventHandwritingErrorReports
+DWORD:1
+
+; Disable synchronization of messages with the cloud
+Computer
+Software\Policies\Microsoft\Windows\Messaging
+AllowMessageSync
+DWORD:1
+
+; Do not let apps access diagnotic info
+Computer
+Software\Policies\Microsoft\Windows\AppPrivacy
+LetAppsGetDiagnosticInfo
+DWORD:2
+
+; Disable cortana above lock screen
+Computer
+Software\Policies\Microsoft\Windows\Windows Search
+AllowCortanaAboveLock
+DWORD:0
+
+; Disable downloading of updates for Cortana speech recognition model
+Computer
+Software\Policies\Microsoft\Speech
+AllowSpeechModelUpdate
+DWORD:0
+
+; Disable advanced location tracking
+Computer
+Software\Policies\Microsoft\Windows\LocationAndSensors
+DisableLocationScripting
+DWORD:1
+
+; Disable application telemetry
+Computer
+Software\Policies\Microsoft\Windows\AppCompat
+AITEnable
+DWORD:0
+
+; Disable OneSettings auditing
+Computer
+Software\Policies\Microsoft\Windows\DataCollection
+EnableOneSettingsAuditing
+DWORD:0
+
+; Prevent OneDrive from generating network traffic until the user signs in
+Computer
+Software\Microsoft\OneDrive
+PreventNetworkTrafficPreUserSignIn
+DWORD:1
+
+; Disable automatic offline map updates
+Computer
+Software\Policies\Microsoft\Windows\Maps
+AutoDownloadAndUpdateMapData
+DWORD:0
+
+; Disable unwanted network traffic for offline maps
+Computer
+Software\Policies\Microsoft\Windows\Maps
+AllowUntriggeredNetworkTrafficOnSettingsPage
+DWORD:1
+
+; Hide recommended section in start menu
+Computer
+Software\Policies\Microsoft\Windows\Explorer
+HideRecommendedSection
+DWORD:1
+
 ; Turn off online speech recognition services
 Computer
 Software\Policies\Microsoft\InputPersonalization
@@ -327,3 +405,4 @@ DWORD:1
 ; Software\Policies\Microsoft\Windows\System
 ; AllowClipboardHistory
 ; DWORD:0
+
