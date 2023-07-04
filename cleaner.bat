@@ -44,11 +44,14 @@ echo "Backing up registry and group policy"
 if not exist ".\BACKUP" (
   mkdir ".\BACKUP"
   if not errorlevel 1 (
-    reg export HKEY_CLASSES_ROOT .\BACKUP\HKCR.reg /y
-    reg export HKEY_LOCAL_MACHINE .\BACKUP\HKLM.reg /y
-    reg export HKEY_CURRENT_USER .\BACKUP\HKCU.reg /y
-    reg export HKEY_USERS .\BACKUP\HKU.reg /y
-    .\LGPO_30\LGPO.exe /b .\BACKUP /n "Backup"
+    mkdir ".\BACKUP\Registry"
+    reg export HKEY_CLASSES_ROOT .\BACKUP\Registry\HKCR.reg /y
+    reg export HKEY_LOCAL_MACHINE .\BACKUP\Registry\HKLM.reg /y
+    reg export HKEY_CURRENT_USER .\BACKUP\Registry\HKCU.reg /y
+    reg export HKEY_USERS .\BACKUP\Registry\HKU.reg /y
+    
+    mkdir ".\BACKUP\GroupPolicy"
+    xcopy "C:\Windows\System32\GroupPolicy" ".\BACKUP\GroupPolicy" /h /i /c /k /e /r /y
   )
 )
 
