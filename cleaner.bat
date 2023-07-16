@@ -52,6 +52,7 @@ if not exist ".\BACKUP" (
     
     mkdir ".\BACKUP\GroupPolicy"
     xcopy "C:\Windows\System32\GroupPolicy" ".\BACKUP\GroupPolicy" /h /i /c /k /e /r /y
+	attrib -s -h ".\BACKUP\GroupPolicy"
   )
 )
 
@@ -95,15 +96,15 @@ TASKKILL /f /im OneDrive.exe
 start /b /wait %systemroot%\System32\OneDriveSetup.exe /uninstall
 reg delete "HKEY_CLASSES_ROOT\Wow6432Node\CLSID\{018D5C66-4533-4307-9B53-224DE2ED1FE6}" /f
 reg delete "HKEY_CLASSES_ROOT\CLSID\{018D5C66-4533-4307-9B53-224DE2ED1FE6}" /f
+rd C:\OneDriveTemp /Q /S >NUL 2>&1
 
 :: Disable getting updates asap
 reg add "HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\WindowsUpdate\UX\Settings" /v IsContinuousInnovationOptedIn /t REG_DWORD /d 0x00000000 /f
 
 :: Disable automatic update of offline maps
-reg add " HKEY_LOCAL_MACHINE\SYSTEM\Maps" /v AutoUpdateEnabled /t REG_DWORD /d 0x00000000 /f
+reg add "HKEY_LOCAL_MACHINE\SYSTEM\Maps" /v AutoUpdateEnabled /t REG_DWORD /d 0x00000000 /f
 
 :: Disable Delivery Optimization
-reg add "HKEY_USERS\S-1-5-20\SOFTWARE\Microsoft\Windows\CurrentVersion\DeliveryOptimization\Settings" /v DownloadMode /t REG_DWORD /d 0x00000000 /f
 reg add "HKEY_USERS\S-1-5-20\SOFTWARE\Microsoft\Windows\CurrentVersion\DeliveryOptimization\Settings" /v DownloadModeProvider /t REG_DWORD /d 0x00000008 /f
 reg add "HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\DoSvc" /v Start /t REG_DWORD /d 0x00000004 /f
 :: sc config "DoSvc" start= disabled
@@ -130,12 +131,6 @@ schtasks /change /tn "Microsoft\Windows\DiskDiagnostic\Microsoft-Windows-DiskDia
 :: Disable device compatibility with Windows check
 schtasks /change /tn "Microsoft\Windows\Application Experience\Microsoft Compatibility Appraiser" /disable
 
-:: Disable telemetry on running apps and services
-schtasks /change /tn "Microsoft\Windows\Application Experience\ProgramDataUpdater" /disable
-
-:: Disable Application Impact Telemetry Agent
-schtasks /change /tn "Microsoft\Windows\Application Experience\AITAgent" /disable
-
 :: Disable automatic collection and sending of usage data
 schtasks /change /tn "Microsoft\Windows\Customer Experience Improvement Program\Consolidator" /disable
 
@@ -145,6 +140,9 @@ schtasks /change /tn "Microsoft\Windows\Feedback\Siuf\DmClientOnScenarioDownload
 
 :: Disable Queueing of reports
 schtasks /change /tn "Microsoft\Windows\Windows Error Reporting\QueueReporting" /disable
+
+:: Disable collection of events on DiagTrack
+reg add "HKLM\SYSTEM\CurrentControlSet\Control\WMI\AutoLogger\AutoLogger-Diagtrack-Listener" /v "Start" /t REG_DWORD /d 0x00000000 /f
 
 :: Disable WiFi-Sense
 reg add "HKEY_LOCAL_MACHINE\Software\Microsoft\PolicyManager\default\WiFi\AllowWiFiHotSpotReporting" /v Value /t REG_DWORD /d 0x00000000 /f
