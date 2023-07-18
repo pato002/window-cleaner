@@ -1,0 +1,6 @@
+; Prevent automatic installation of new apps suggested by Microsoft
+User
+Software\Microsoft\Windows\CurrentVersion\ContentDeliveryManager
+SilentInstalledAppsEnabled
+DWORD:0
+

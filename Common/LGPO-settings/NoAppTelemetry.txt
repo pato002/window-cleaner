@@ -1,0 +1,6 @@
+; Disable application telemetry
+Computer
+Software\Policies\Microsoft\Windows\AppCompat
+AITEnable
+DWORD:0
+

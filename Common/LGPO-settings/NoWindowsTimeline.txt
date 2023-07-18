@@ -1,0 +1,6 @@
+; Disable Windows Timeline
+Computer
+Software\Policies\Microsoft\Windows\System
+EnableActivityFeed
+DWORD:0
+

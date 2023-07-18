@@ -1,0 +1,6 @@
+; Do not show any Windows tips
+Computer
+Software\Policies\Microsoft\Windows\CloudContent
+DisableSoftLanding
+DWORD:1
+

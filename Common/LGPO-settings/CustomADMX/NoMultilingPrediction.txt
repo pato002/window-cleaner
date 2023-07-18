@@ -1,0 +1,6 @@
+; Disable text suggestions in other languages
+User
+Software\Microsoft\Input\Settings
+MultilingualEnabled
+DWORD:0
+

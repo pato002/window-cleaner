@@ -1,0 +1,6 @@
+; Do not allow Cortana and Search to use location
+Computer
+SOFTWARE\Policies\Microsoft\Windows\Windows Search
+AllowSearchToUseLocation
+DWORD:0
+

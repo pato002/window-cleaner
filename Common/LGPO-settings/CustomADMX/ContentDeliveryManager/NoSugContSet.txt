@@ -1,0 +1,16 @@
+; Turn off suggestions in Settings
+User
+Software\Microsoft\Windows\CurrentVersion\ContentDeliveryManager
+SubscribedContent-338393Enabled
+DWORD:0
+
+User
+Software\Microsoft\Windows\CurrentVersion\ContentDeliveryManager
+SubscribedContent-353694Enabled
+DWORD:0
+
+User
+Software\Microsoft\Windows\CurrentVersion\ContentDeliveryManager
+SubscribedContent-353696Enabled
+DWORD:0
+

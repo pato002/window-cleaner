@@ -1,0 +1,6 @@
+; Turn off synchronizing clipboard across devices 
+Computer
+Software\Policies\Microsoft\Windows\System
+AllowCrossDeviceClipboard
+DWORD:0
+

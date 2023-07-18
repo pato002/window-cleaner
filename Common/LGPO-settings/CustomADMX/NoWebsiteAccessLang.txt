@@ -1,0 +1,5 @@
+; No access to language info for websites
+User
+Control Panel\International\User Profile
+HttpAcceptLanguageOptOut
+DWORD:1

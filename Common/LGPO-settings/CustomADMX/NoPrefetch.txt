@@ -1,0 +1,6 @@
+; Disable Windows Prefetcher
+Computer
+SYSTEM\CurrentControlSet\Control\Session Manager\Memory Management\PrefetchParameters
+EnablePrefetcher
+DWORD:0
+

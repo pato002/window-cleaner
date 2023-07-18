@@ -1,0 +1,6 @@
+; Prevent suggested applications from ever getting installed
+User
+Software\Microsoft\Windows\CurrentVersion\ContentDeliveryManager
+PreInstalledAppsEverEnabled
+DWORD:0
+

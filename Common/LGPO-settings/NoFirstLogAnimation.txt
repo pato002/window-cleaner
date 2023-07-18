@@ -1,0 +1,6 @@
+; Disable first logon animation
+Computer
+Software\Microsoft\Windows\CurrentVersion\Policies\System
+EnableFirstLogonAnimation
+DWORD:0
+

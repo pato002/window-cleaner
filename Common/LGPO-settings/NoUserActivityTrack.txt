@@ -1,0 +1,11 @@
+; Turn off tracking of User Activities
+Computer
+Software\Policies\Microsoft\Windows\System
+PublishUserActivities
+DWORD:0
+
+Computer
+Software\Policies\Microsoft\Windows\System
+UploadUserActivities
+DWORD:0
+

@@ -1,0 +1,6 @@
+; Disable OneSettings auditing
+Computer
+Software\Policies\Microsoft\Windows\DataCollection
+EnableOneSettingsAuditing
+DWORD:0
+

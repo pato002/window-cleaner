@@ -1,0 +1,6 @@
+; Prevent the use of OneDrive for file storage
+Computer
+Software\Policies\Microsoft\Windows\OneDrive
+DisableFileSyncNGSC
+DWORD:1
+

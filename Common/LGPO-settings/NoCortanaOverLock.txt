@@ -1,0 +1,6 @@
+; Disable Cortana above lock screen
+Computer
+Software\Policies\Microsoft\Windows\Windows Search
+AllowCortanaAboveLock
+DWORD:0
+

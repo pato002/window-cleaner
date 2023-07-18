@@ -1,0 +1,5 @@
+; Prevent Windows from showing tips, tricks and suggestions on how to use Windows
+User
+Software\Microsoft\Windows\CurrentVersion\ContentDeliveryManager
+SubscribedContent-338389Enabled
+DWORD:0

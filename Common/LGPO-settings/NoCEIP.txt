@@ -1,0 +1,6 @@
+; Turn off Windows Customer Experience Improvement Program
+Computer
+Software\Policies\Microsoft\SQMClient\Windows
+CEIPEnable
+DWORD:0
+

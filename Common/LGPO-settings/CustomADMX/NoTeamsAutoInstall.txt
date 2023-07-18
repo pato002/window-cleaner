@@ -1,0 +1,6 @@
+; Prevent Teams from installing automatically
+Computer
+SOFTWARE\Microsoft\Windows\CurrentVersion\Communications
+ConfigureChatAutoInstall
+DWORD:0
+

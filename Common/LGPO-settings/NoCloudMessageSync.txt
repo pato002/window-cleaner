@@ -1,0 +1,6 @@
+; Disable synchronization of messages with the cloud
+Computer
+Software\Policies\Microsoft\Windows\Messaging
+AllowMessageSync
+DWORD:1
+

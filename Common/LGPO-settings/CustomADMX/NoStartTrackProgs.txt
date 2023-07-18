@@ -1,0 +1,5 @@
+; Do not let Windows track app launches
+User
+Software\Microsoft\Windows\CurrentVersion\Explorer\Advanced
+Start_TrackProgs
+DWORD:0

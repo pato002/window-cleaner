@@ -1,0 +1,6 @@
+; Disable WiFi-Sense hotspot reporting
+Computer
+Software\Microsoft\PolicyManager\default\WiFi\AllowWiFiHotSpotReporting
+Value
+DWORD:0
+

@@ -1,0 +1,6 @@
+; Only send anonymous data with Bing in Search
+Computer
+Software\Policies\Microsoft\Windows\Windows Search
+ConnectedSearchPrivacy
+DWORD:3
+

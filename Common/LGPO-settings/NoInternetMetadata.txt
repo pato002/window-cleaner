@@ -1,0 +1,6 @@
+; Prevent collecting device metadata from internet
+Computer
+Software\Policies\Microsoft\Windows\Device Metadata
+PreventDeviceMetadataFromNetwork
+DWORD:1
+

@@ -1,0 +1,6 @@
+; Turn off Windows feature management
+User
+Software\Microsoft\Windows\CurrentVersion\ContentDeliveryManager
+FeatureManagementEnabled
+DWORD:0
+

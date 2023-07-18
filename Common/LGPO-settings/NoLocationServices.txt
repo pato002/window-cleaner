@@ -1,0 +1,16 @@
+; Disable location services 
+Computer
+Software\Policies\Microsoft\Windows\LocationAndSensors
+DisableLocation
+DWORD:1
+
+Computer
+Software\Policies\Microsoft\Windows\LocationAndSensors
+DisableWindowsLocationProvider
+DWORD:1
+
+Computer
+Software\Policies\Microsoft\Windows\LocationAndSensors
+DisableSensors
+DWORD:1
+

@@ -1,0 +1,5 @@
+; Prevent Windows from sending tips in notifications
+User
+Software\Microsoft\Windows\CurrentVersion\ContentDeliveryManager
+SoftLandingEnabled
+DWORD:0

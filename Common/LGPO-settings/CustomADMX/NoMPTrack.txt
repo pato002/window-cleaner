@@ -1,0 +1,5 @@
+; Disable Windows Media Player usage tracking
+User
+Software\Microsoft\MediaPlayer\Preferences
+UsageTracking
+DWORD:0

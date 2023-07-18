@@ -1,0 +1,6 @@
+; Disable Windows Spotlight together with all its annoying features
+User
+Software\Policies\Microsoft\Windows\CloudContent
+DisableWindowsSpotlightFeatures
+DWORD:1
+

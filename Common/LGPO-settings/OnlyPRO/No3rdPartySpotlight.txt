@@ -1,0 +1,6 @@
+; Do not suggest third-party content in Windows Spotlight
+User
+Software\Policies\Microsoft\Windows\CloudContent
+DisableThirdPartySuggestions
+DWORD:1
+

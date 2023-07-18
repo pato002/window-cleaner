@@ -1,0 +1,6 @@
+; Do not show recently added apps
+Computer
+Software\Policies\Microsoft\Windows\Explorer
+HideRecentlyAddedApps
+DWORD:1
+

@@ -1,0 +1,6 @@
+; Send no diagnostic data
+Computer
+Software\Policies\Microsoft\Windows\DataCollection
+AllowTelemetry
+DWORD:0
+

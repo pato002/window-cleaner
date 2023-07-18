@@ -1,0 +1,6 @@
+; Prevent Windows from showing suggestions on the taskbar
+User
+Software\Microsoft\Windows\CurrentVersion\ContentDeliveryManager
+SystemPaneSuggestionsEnabled
+DWORD:0
+

@@ -2,7 +2,6 @@
 
 :: PLEASE RUN AFTER APPLYING CHANGES AND REBOOTING
 echo "This script will fix possible minor file corruption after settings applied to the computer."
-PAUSE
 
 :: Ask for admin permissions
     IF "%PROCESSOR_ARCHITECTURE%" EQU "amd64" (
@@ -30,6 +29,10 @@ if '%errorlevel%' NEQ '0' (
     pushd "%CD%"
     CD /D "%~dp0"
 
+:: Ask about online repair
+set dism=
+set /p "dism=Would you also like to run an online repair of Windows using DISM? You need to be connected to the internet. If you do, type YES: "
+
 :: Check errors on filesystem
 start /b /wait chkntfs C:
 
@@ -37,8 +40,6 @@ start /b /wait chkntfs C:
 start /b /wait sfc /scannow
 
 :: Run online repair
-set dism=
-set /p "dism=Would you also like to run an online repair of Windows using DISM? You need to be connected to the internet. If you do, type YES: "
 if /i "%dism%"=="YES" (
   start /b /wait dism /online /cleanup-image /restorehealth
 )

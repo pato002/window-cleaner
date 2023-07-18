@@ -1,0 +1,6 @@
+; Prevent OneDrive from generating network traffic until the user signs in
+Computer
+Software\Microsoft\OneDrive
+PreventNetworkTrafficPreUserSignIn
+DWORD:1
+

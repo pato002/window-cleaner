@@ -1,0 +1,6 @@
+; Disable sending handwriting data to Microsoft
+Computer
+Software\Policies\Microsoft\Windows\TabletPC
+PreventHandwritingDataSharing
+DWORD:1
+

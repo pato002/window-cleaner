@@ -1,0 +1,6 @@
+; Disable Cloud Search
+Computer
+Software\Policies\Microsoft\Windows\Windows Search
+AllowCloudSearch
+DWORD:0
+

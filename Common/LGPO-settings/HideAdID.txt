@@ -1,0 +1,6 @@
+; Hide advertising ID from apps
+Computer
+Software\Policies\Microsoft\Windows\AdvertisingInfo
+DisabledByGroupPolicy
+DWORD:1
+

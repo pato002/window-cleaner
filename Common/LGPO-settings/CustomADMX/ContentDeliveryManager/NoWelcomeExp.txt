@@ -1,0 +1,6 @@
+; Disable Windows Welcome Experiences like forcing to sign in to Microsoft Account
+User
+Software\Microsoft\Windows\CurrentVersion\ContentDeliveryManager
+SubscribedContent-310093Enabled
+DWORD:0
+

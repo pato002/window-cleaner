@@ -1,0 +1,6 @@
+; Disable Widgets
+Computer
+Software\Policies\Microsoft\Dsh
+AllowNewsAndInterests
+DWORD:0
+

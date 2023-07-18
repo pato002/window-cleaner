@@ -1,0 +1,6 @@
+; Hide recommended section in start menu
+Computer
+Software\Policies\Microsoft\Windows\Explorer
+HideRecommendedSection
+DWORD:1
+

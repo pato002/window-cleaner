@@ -1,0 +1,6 @@
+; Turn off Windows Spotlight on lock screen
+User
+Software\Microsoft\Windows\CurrentVersion\ContentDeliveryManager
+RotatingLockScreenEnabled
+DWORD:0
+

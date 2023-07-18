@@ -1,0 +1,6 @@
+; Disable automatic offline map updates
+Computer
+Software\Policies\Microsoft\Windows\Maps
+AutoDownloadAndUpdateMapData
+DWORD:0
+

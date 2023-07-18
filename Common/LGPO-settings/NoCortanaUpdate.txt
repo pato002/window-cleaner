@@ -1,0 +1,6 @@
+; Disable downloading of updates for Cortana speech recognition model
+Computer
+Software\Policies\Microsoft\Speech
+AllowSpeechModelUpdate
+DWORD:0
+

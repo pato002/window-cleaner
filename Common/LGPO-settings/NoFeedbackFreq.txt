@@ -1,0 +1,6 @@
+; Set feedback frequency to never
+Computer
+Software\Policies\Microsoft\Windows\DataCollection
+DoNotShowFeedbackNotifications
+DWORD:1
+

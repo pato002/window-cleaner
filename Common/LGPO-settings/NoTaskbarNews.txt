@@ -1,0 +1,6 @@
+; Disable News and Interests on the toolbar
+Computer
+Software\Policies\Microsoft\Windows\Windows Feeds
+EnableFeeds
+DWORD:1
+

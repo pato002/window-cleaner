@@ -1,0 +1,6 @@
+; Turn off Steps Recorder
+Computer
+Software\Policies\Microsoft\Windows\AppCompat
+DisableUAR
+DWORD:1
+

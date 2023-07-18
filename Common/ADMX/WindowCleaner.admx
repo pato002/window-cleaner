@@ -1,0 +1,357 @@
+<?xml version="1.0" encoding="utf-8"?>
+<policyDefinitions xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" revision="1.0" schemaVersion="1.0" xmlns="http://schemas.microsoft.com/GroupPolicy/2006/07/PolicyDefinitions">
+  <policyNamespaces>
+    <target prefix="WindowCleaner" namespace="Microsoft.Policies.WindowCleaner" />
+    <using prefix="windows" namespace="Microsoft.Policies.Windows" />
+  </policyNamespaces>
+  
+  <resources minRequiredRevision="1.0" />
+
+  <categories>
+    <category name="Window_Cleaner" displayName="$(string.Window_Cleaner)" />
+    <category name="ContentDeliveryManager" displayName="$(string.ContentDeliveryManager)">
+      <parentCategory ref="Window_Cleaner" />
+    </category>
+  </categories>
+  
+  <policies>
+  
+    <!-- MACHINE POLICIES -->
+
+	<policy name="DisablePrefetch" class="Machine" displayName="$(string.DisablePrefetch)" explainText="$(string.DisablePrefetch_Explain)" key="SYSTEM\CurrentControlSet\Control\Session Manager\Memory Management\PrefetchParameters" valueName="EnablePrefetcher">
+    <parentCategory ref="Window_Cleaner" />
+    <supportedOn ref="windows:SUPPORTED_Windows_10_0" />
+    <enabledValue>
+      <decimal value="1" />
+    </enabledValue>
+    <disabledValue>
+      <decimal value="0" />
+    </disabledValue>
+  </policy>
+
+	<policy name="AutoTeams" class="Machine" displayName="$(string.AutoTeams)" explainText="$(string.AutoTeams_Explain)" key="SOFTWARE\Microsoft\Windows\CurrentVersion\Communications" valueName="ConfigureChatAutoInstall">
+    <parentCategory ref="Window_Cleaner" />
+    <supportedOn ref="windows:SUPPORTED_Windows_10_0" />
+    <enabledValue>
+      <decimal value="1" />
+    </enabledValue>
+    <disabledValue>
+      <decimal value="0" />
+    </disabledValue>
+  </policy>
+
+	<policy name="WiFiSenseReport" class="Machine" displayName="$(string.WiFiSenseReport)" explainText="$(string.WiFiSenseReport_Explain)" key="Software\Microsoft\PolicyManager\default\WiFi\AllowWiFiHotSpotReporting" valueName="Value">
+    <parentCategory ref="Window_Cleaner" />
+    <supportedOn ref="windows:SUPPORTED_Windows_10_0" />
+    <enabledValue>
+      <decimal value="1" />
+    </enabledValue>
+    <disabledValue>
+      <decimal value="0" />
+    </disabledValue>
+  </policy>
+
+	<policy name="WiFiSenseAuto" class="Machine" displayName="$(string.WiFiSenseAuto)" explainText="$(string.WiFiSenseAuto_Explain)" key="Software\Microsoft\PolicyManager\default\WiFi\AllowAutoConnectToWiFiSenseHotspots" valueName="Value">
+    <parentCategory ref="Window_Cleaner" />
+    <supportedOn ref="windows:SUPPORTED_Windows_10_0" />
+    <enabledValue>
+      <decimal value="1" />
+    </enabledValue>
+    <disabledValue>
+      <decimal value="0" />
+    </disabledValue>
+  </policy>
+
+    <!-- USER POLICIES -->
+  
+	<policy name="ExplorerAds" class="User" displayName="$(string.ExplorerAds)" explainText="$(string.ExplorerAds_Explain)" key="Software\Microsoft\Windows\CurrentVersion\Explorer\Advanced" valueName="ShowSyncProviderNotifications">
+    <parentCategory ref="Window_Cleaner" />
+    <supportedOn ref="windows:SUPPORTED_Windows_10_0" />
+    <enabledValue>
+      <decimal value="1" />
+    </enabledValue>
+    <disabledValue>
+      <decimal value="0" />
+    </disabledValue>
+  </policy>
+  
+	<policy name="HwkbPrediction" class="User" displayName="$(string.HwkbPrediction)" explainText="$(string.HwkbPrediction_Explain)" key="Software\Microsoft\Windows\CurrentVersion\Explorer\Advanced" valueName="ShowSyncProviderNotifications">
+    <parentCategory ref="Window_Cleaner" />
+    <supportedOn ref="windows:SUPPORTED_Windows_10_0" />
+    <enabledValue>
+      <decimal value="1" />
+    </enabledValue>
+    <disabledValue>
+      <decimal value="0" />
+    </disabledValue>
+  </policy>
+  
+	<policy name="SwkbPrediction" class="User" displayName="$(string.SwkbPrediction)" explainText="$(string.SwkbPrediction_Explain)" key="Software\Microsoft\Input\Settings\proc_1\loc_0409\im_1" valueName="Prediction">
+    <parentCategory ref="Window_Cleaner" />
+    <supportedOn ref="windows:SUPPORTED_Windows_10_0" />
+    <enabledValue>
+      <decimal value="1" />
+    </enabledValue>
+    <disabledValue>
+      <decimal value="0" />
+    </disabledValue>
+  </policy>
+  
+	<policy name="MultilingPrediction" class="User" displayName="$(string.MultilingPrediction)" explainText="$(string.MultilingPrediction_Explain)" key="Software\Microsoft\Input\Settings" valueName="MultilingualEnabled">
+    <parentCategory ref="Window_Cleaner" />
+    <supportedOn ref="windows:SUPPORTED_Windows_10_0" />
+    <enabledValue>
+      <decimal value="1" />
+    </enabledValue>
+    <disabledValue>
+      <decimal value="0" />
+    </disabledValue>
+  </policy>
+  
+	<policy name="MPTrack" class="User" displayName="$(string.MPTrack)" explainText="$(string.MPTrack_Explain)" key="Software\Microsoft\MediaPlayer\Preferences" valueName="UsageTracking">
+    <parentCategory ref="Window_Cleaner" />
+    <supportedOn ref="windows:SUPPORTED_Windows_10_0" />
+    <enabledValue>
+      <decimal value="1" />
+    </enabledValue>
+    <disabledValue>
+      <decimal value="0" />
+    </disabledValue>
+  </policy>
+
+	<policy name="StartTrackProgs" class="User" displayName="$(string.StartTrackProgs)" explainText="$(string.StartTrackProgs_Explain)" key="Software\Microsoft\Windows\CurrentVersion\Explorer\Advanced" valueName="Start_TrackProgs">
+    <parentCategory ref="Window_Cleaner" />
+    <supportedOn ref="windows:SUPPORTED_Windows_10_0" />
+    <enabledValue>
+      <decimal value="1" />
+    </enabledValue>
+    <disabledValue>
+      <decimal value="0" />
+    </disabledValue>
+  </policy>
+	
+	<policy name="WebsiteAccessLang" class="User" displayName="$(string.WebsiteAccessLang)" explainText="$(string.WebsiteAccessLang_Explain)" key="Control Panel\International\User Profile" valueName="HttpAcceptLanguageOptOut">
+    <parentCategory ref="Window_Cleaner" />
+    <supportedOn ref="windows:SUPPORTED_Windows_10_0" />
+    <enabledValue>
+      <decimal value="0" />
+    </enabledValue>
+    <disabledValue>
+      <decimal value="1" />
+    </disabledValue>
+  </policy>
+
+	  <!-- CONTENT DELIVERY MANAGER -->
+  
+	<policy name="WelcomeExp" class="User" displayName="$(string.WelcomeExp)" explainText="$(string.WelcomeExp_Explain)" key="Software\Microsoft\Windows\CurrentVersion\ContentDeliveryManager" valueName="SubscribedContent-310093Enabled">
+    <parentCategory ref="ContentDeliveryManager" />
+    <supportedOn ref="windows:SUPPORTED_Windows_10_0" />
+    <enabledValue>
+      <decimal value="1" />
+    </enabledValue>
+    <disabledValue>
+      <decimal value="0" />
+    </disabledValue>
+  </policy>
+  
+	<policy name="TipTrickSug" class="User" displayName="$(string.TipTrickSug)" explainText="$(string.TipTrickSug_Explain)" key="Software\Microsoft\Windows\CurrentVersion\ContentDeliveryManager" valueName="SubscribedContent-338389Enabled">
+    <parentCategory ref="ContentDeliveryManager" />
+    <supportedOn ref="windows:SUPPORTED_Windows_10_0" />
+    <enabledValue>
+      <decimal value="1" />
+    </enabledValue>
+    <disabledValue>
+      <decimal value="0" />
+    </disabledValue>
+  </policy>
+    
+	<policy name="NotTip" class="User" displayName="$(string.NotTip)" explainText="$(string.NotTip_Explain)" key="Software\Microsoft\Windows\CurrentVersion\ContentDeliveryManager" valueName="SoftLandingEnabled">
+    <parentCategory ref="ContentDeliveryManager" />
+    <supportedOn ref="windows:SUPPORTED_Windows_10_0" />
+    <enabledValue>
+      <decimal value="1" />
+    </enabledValue>
+    <disabledValue>
+      <decimal value="0" />
+    </disabledValue>
+  </policy>
+  
+	<policy name="SugContSet1" class="User" displayName="$(string.SugContSet1)" explainText="$(string.SugContSet1_Explain)" key="Software\Microsoft\Windows\CurrentVersion\ContentDeliveryManager" valueName="SubscribedContent-338393Enabled">
+    <parentCategory ref="ContentDeliveryManager" />
+    <supportedOn ref="windows:SUPPORTED_Windows_10_0" />
+    <enabledValue>
+      <decimal value="1" />
+    </enabledValue>
+    <disabledValue>
+      <decimal value="0" />
+    </disabledValue>
+  </policy>
+  
+	<policy name="SugContSet2" class="User" displayName="$(string.SugContSet2)" explainText="$(string.SugContSet2_Explain)" key="Software\Microsoft\Windows\CurrentVersion\ContentDeliveryManager" valueName="SubscribedContent-353694Enabled">
+    <parentCategory ref="ContentDeliveryManager" />
+    <supportedOn ref="windows:SUPPORTED_Windows_10_0" />
+    <enabledValue>
+      <decimal value="1" />
+    </enabledValue>
+    <disabledValue>
+      <decimal value="0" />
+    </disabledValue>
+  </policy>
+  
+	<policy name="SugContSet3" class="User" displayName="$(string.SugContSet3)" explainText="$(string.SugContSet3_Explain)" key="Software\Microsoft\Windows\CurrentVersion\ContentDeliveryManager" valueName="SubscribedContent-353696Enabled">
+    <parentCategory ref="ContentDeliveryManager" />
+    <supportedOn ref="windows:SUPPORTED_Windows_10_0" />
+    <enabledValue>
+      <decimal value="1" />
+    </enabledValue>
+    <disabledValue>
+      <decimal value="0" />
+    </disabledValue>
+  </policy>
+  
+	<policy name="FeatureMan" class="User" displayName="$(string.FeatureMan)" explainText="$(string.FeatureMan_Explain)" key="Software\Microsoft\Windows\CurrentVersion\ContentDeliveryManager" valueName="FeatureManagementEnabled">
+    <parentCategory ref="ContentDeliveryManager" />
+    <supportedOn ref="windows:SUPPORTED_Windows_10_0" />
+    <enabledValue>
+      <decimal value="1" />
+    </enabledValue>
+    <disabledValue>
+      <decimal value="0" />
+    </disabledValue>
+  </policy>
+  
+	<policy name="OEMPreinstallApp" class="User" displayName="$(string.OEMPreinstallApp)" explainText="$(string.OEMPreinstallApp_Explain)" key="Software\Microsoft\Windows\CurrentVersion\ContentDeliveryManager" valueName="OemPreInstalledAppsEnabled">
+    <parentCategory ref="ContentDeliveryManager" />
+    <supportedOn ref="windows:SUPPORTED_Windows_10_0" />
+    <enabledValue>
+      <decimal value="1" />
+    </enabledValue>
+    <disabledValue>
+      <decimal value="0" />
+    </disabledValue>
+  </policy>
+  
+	<policy name="PreinstallApp" class="User" displayName="$(string.PreinstallApp)" explainText="$(string.PreinstallApp_Explain)" key="Software\Microsoft\Windows\CurrentVersion\ContentDeliveryManager" valueName="PreInstalledAppsEnabled">
+    <parentCategory ref="ContentDeliveryManager" />
+    <supportedOn ref="windows:SUPPORTED_Windows_10_0" />
+    <enabledValue>
+      <decimal value="1" />
+    </enabledValue>
+    <disabledValue>
+      <decimal value="0" />
+    </disabledValue>
+  </policy>
+  
+	<policy name="SpotlightLock" class="User" displayName="$(string.SpotlightLock)" explainText="$(string.SpotlightLock_Explain)" key="Software\Microsoft\Windows\CurrentVersion\ContentDeliveryManager" valueName="RotatingLockScreenEnabled">
+    <parentCategory ref="ContentDeliveryManager" />
+    <supportedOn ref="windows:SUPPORTED_Windows_10_0" />
+    <enabledValue>
+      <decimal value="1" />
+    </enabledValue>
+    <disabledValue>
+      <decimal value="0" />
+    </disabledValue>
+  </policy>
+  
+	<policy name="SpotlightOverLock" class="User" displayName="$(string.SpotlightOverLock)" explainText="$(string.SpotlightOverLock_Explain)" key="Software\Microsoft\Windows\CurrentVersion\ContentDeliveryManager" valueName="RotatingLockScreenOverlayEnabled">
+    <parentCategory ref="ContentDeliveryManager" />
+    <supportedOn ref="windows:SUPPORTED_Windows_10_0" />
+    <enabledValue>
+      <decimal value="1" />
+    </enabledValue>
+    <disabledValue>
+      <decimal value="0" />
+    </disabledValue>
+  </policy>
+  
+	<policy name="PanelSug" class="User" displayName="$(string.PanelSug)" explainText="$(string.PanelSug_Explain)" key="Software\Microsoft\Windows\CurrentVersion\ContentDeliveryManager" valueName="SystemPaneSuggestionsEnabled">
+    <parentCategory ref="ContentDeliveryManager" />
+    <supportedOn ref="windows:SUPPORTED_Windows_10_0" />
+    <enabledValue>
+      <decimal value="1" />
+    </enabledValue>
+    <disabledValue>
+      <decimal value="0" />
+    </disabledValue>
+  </policy>
+  
+	<policy name="SpotlightSlideshow" class="User" displayName="$(string.SpotlightSlideshow)" explainText="$(string.SpotlightSlideshow_Explain)" key="Software\Microsoft\Windows\CurrentVersion\ContentDeliveryManager" valueName="SlideshowEnabled">
+    <parentCategory ref="ContentDeliveryManager" />
+    <supportedOn ref="windows:SUPPORTED_Windows_10_0" />
+    <enabledValue>
+      <decimal value="1" />
+    </enabledValue>
+    <disabledValue>
+      <decimal value="0" />
+    </disabledValue>
+  </policy>
+  
+	<policy name="NewContentDelivery" class="User" displayName="$(string.NewContentDelivery)" explainText="$(string.NewContentDelivery_Explain)" key="Software\Microsoft\Windows\CurrentVersion\ContentDeliveryManager" valueName="ContentDeliveryAllowed">
+    <parentCategory ref="ContentDeliveryManager" />
+    <supportedOn ref="windows:SUPPORTED_Windows_10_0" />
+    <enabledValue>
+      <decimal value="1" />
+    </enabledValue>
+    <disabledValue>
+      <decimal value="0" />
+    </disabledValue>
+  </policy>
+  
+	<policy name="PreinstallAppEver" class="User" displayName="$(string.PreinstallAppEver)" explainText="$(string.PreinstallAppEver_Explain)" key="Software\Microsoft\Windows\CurrentVersion\ContentDeliveryManager" valueName="PreInstalledAppsEverEnabled">
+    <parentCategory ref="ContentDeliveryManager" />
+    <supportedOn ref="windows:SUPPORTED_Windows_10_0" />
+    <enabledValue>
+      <decimal value="1" />
+    </enabledValue>
+    <disabledValue>
+      <decimal value="0" />
+    </disabledValue>
+  </policy>
+  
+	<policy name="AutoInstallApp" class="User" displayName="$(string.AutoInstallApp)" explainText="$(string.AutoInstallApp_Explain)" key="Software\Microsoft\Windows\CurrentVersion\ContentDeliveryManager" valueName="SilentInstalledAppsEnabled">
+    <parentCategory ref="ContentDeliveryManager" />
+    <supportedOn ref="windows:SUPPORTED_Windows_10_0" />
+    <enabledValue>
+      <decimal value="1" />
+    </enabledValue>
+    <disabledValue>
+      <decimal value="0" />
+    </disabledValue>
+  </policy>
+  
+	<policy name="GetMostWindows" class="User" displayName="$(string.GetMostWindows)" explainText="$(string.GetMostWindows_Explain)" key="Software\Microsoft\Windows\CurrentVersion\ContentDeliveryManager" valueName="ScoobeSystemSettingEnabled">
+    <parentCategory ref="ContentDeliveryManager" />
+    <supportedOn ref="windows:SUPPORTED_Windows_10_0" />
+    <enabledValue>
+      <decimal value="1" />
+    </enabledValue>
+    <disabledValue>
+      <decimal value="0" />
+    </disabledValue>
+  </policy>
+  
+	<policy name="TimelineSug" class="User" displayName="$(string.TimelineSug)" explainText="$(string.TimelineSug_Explain)" key="Software\Microsoft\Windows\CurrentVersion\ContentDeliveryManager" valueName="SubscribedContent-353698Enabled">
+    <parentCategory ref="ContentDeliveryManager" />
+    <supportedOn ref="windows:SUPPORTED_Windows_10_0" />
+    <enabledValue>
+      <decimal value="1" />
+    </enabledValue>
+    <disabledValue>
+      <decimal value="0" />
+    </disabledValue>
+  </policy>
+  
+	<policy name="TailoredExp" class="User" displayName="$(string.TailoredExp)" explainText="$(string.TailoredExp_Explain)" key="Software\Microsoft\Windows\CurrentVersion\ContentDeliveryManager" valueName="SubscribedContent-314563Enabled">
+    <parentCategory ref="ContentDeliveryManager" />
+    <supportedOn ref="windows:SUPPORTED_Windows_10_0" />
+    <enabledValue>
+      <decimal value="1" />
+    </enabledValue>
+    <disabledValue>
+      <decimal value="0" />
+    </disabledValue>
+  </policy>
+
+  
+  </policies>
+</policyDefinitions>

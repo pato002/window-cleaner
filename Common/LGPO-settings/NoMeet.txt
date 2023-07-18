@@ -1,0 +1,6 @@
+; Hide the Meet Now icon from the notification area
+User
+Software\Microsoft\Windows\CurrentVersion\Policies\Explorer
+HideSCAMeetNow
+DWORD:1
+

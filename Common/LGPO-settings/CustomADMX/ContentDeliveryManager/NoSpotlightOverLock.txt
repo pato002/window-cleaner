@@ -1,0 +1,5 @@
+; Turn off Windows Spotlight overlay on lock screen
+User
+Software\Microsoft\Windows\CurrentVersion\ContentDeliveryManager
+RotatingLockScreenOverlayEnabled
+DWORD:0

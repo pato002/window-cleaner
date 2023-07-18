@@ -1,0 +1,6 @@
+; Disable AutoPlay
+Computer
+Software\Microsoft\Windows\CurrentVersion\Policies\Explorer
+NoDriveTypeAutoRun
+DWORD:1
+

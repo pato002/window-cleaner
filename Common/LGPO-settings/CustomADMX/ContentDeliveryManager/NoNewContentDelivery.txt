@@ -1,0 +1,5 @@
+; Prevent new Content Delivery Manager features from getting allowed
+User
+Software\Microsoft\Windows\CurrentVersion\ContentDeliveryManager
+ContentDeliveryAllowed
+DWORD:0

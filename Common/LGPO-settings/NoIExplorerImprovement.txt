@@ -1,0 +1,6 @@
+; Prevent participation in the Customer Experience Improvement Program in Internet Explorer
+Computer
+Software\Policies\Microsoft\Internet Explorer\SQM
+DisableCustomerImprovementProgram
+DWORD:0
+

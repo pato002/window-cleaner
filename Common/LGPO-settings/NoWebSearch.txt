@@ -1,0 +1,11 @@
+; Disable Web Search in Windows Search
+Computer
+Software\Policies\Microsoft\Windows\Windows Search
+ConnectedSearchUseWeb
+DWORD:0
+
+Computer
+Software\Policies\Microsoft\Windows\Windows Search
+DisableWebSearch
+DWORD:1
+

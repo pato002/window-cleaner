@@ -1,0 +1,111 @@
+<policyDefinitionResources revision="1.0" schemaVersion="1.0">
+  <displayName>
+  </displayName>
+  <description>
+  </description>
+  <resources>
+    <stringTable>
+    <string id="Window_Cleaner">Window Cleaner</string>
+    <string id="ContentDeliveryManager">Content Delivery Manager</string>
+    
+    <!-- MACHINE POLICIES -->
+
+    <string id="DisablePrefetch">Prefetcher</string>
+    <string id="DisablePrefetch_Explain">Disabling will disable Windows Prefetcher.</string>
+
+    <string id="AutoTeams">Teams automatic installation</string>
+    <string id="AutoTeams_Explain">Disabling will prevent Micorosoft Teams from automatically installing.</string>
+
+    <string id="WiFiSenseReport">Wifi-Sense hotspot reporting</string>
+    <string id="WiFiSenseReport_Explain">Disabling will prevent Wifi-Sense hotspot reporting.</string>
+
+    <string id="WiFiSenseAuto">Wifi-Sense automatic connecting</string>
+    <string id="WiFiSenseAuto_Explain">Disabling will prevent connecting automatically to Wifi-Sense networks.</string>
+
+    <!-- USER POLICIES -->
+
+    <string id="ExplorerAds">File Explorer ads for OneDrive</string>
+    <string id="ExplorerAds_Explain">Disabling will prevent File Explorer from advertising OneDrive.</string>
+    
+    <string id="HwkbPrediction">Hardware keyboard text prediction</string>
+    <string id="HwkbPrediction_Explain">Disabling will disable hardware keyboard text prediction.</string>
+
+    <string id="SwkbPrediction">Software keyboard text prediction</string>
+    <string id="SwkbPrediction_Explain">Disabling will disable software keyboard text prediction.</string>
+
+    <string id="MultilingPrediction">Text prediction in other languages</string>
+    <string id="MultilingPrediction_Explain">Disabling will prevent text prediction in other languages.</string>
+
+    <string id="MPTrack">Windows Media Player usage tracking</string>
+    <string id="MPTrack_Explain">Disabling will prevent Windows Media Player from collecting usage data.</string>
+
+	  <string id="StartTrackProgs">Let Windows track app launches to improve Start and search results</string>
+	  <string id="StartTrackProgs_Explain">Disabling will prevent Windows from tracking app launches to improve Start and search results.</string>
+	  
+	  <string id="WebsiteAccessLang">Do not let websites access local language list</string>
+	  <string id="WebsiteAccessLang_Explain">Disabling prevents websites accessing language list to provide local content.</string>
+	  
+    <!-- CONTENT DELIVERY MANAGER -->
+
+    <string id="WelcomeExp">Windows Welcome Experiences</string>
+    <string id="WelcomeExp_Explain">Disabling will hide Windows Welcome Experiences like forcing to sign in to Microsoft Account.</string>
+
+    <string id="TipTrickSug">Tips, tricks, and suggestions</string>
+    <string id="TipTrickSug_Explain">Disabling will prevent Windows from showing tips, tricks and suggestions on how to use Windows.</string>
+
+    <string id="NotTip">Notification Tips</string>
+    <string id="NotTip_Explain">Disabling will prevent Windows from sending tips in notifications.</string>
+
+    <string id="SugContSet1">Hide suggested content in Settings no. 1</string>
+    <string id="SugContSet1_Explain">Disabling all 3 policies should turn off suggestions in Settings.</string>
+
+    <string id="SugContSet2">Hide suggested content in Settings no. 2</string>
+    <string id="SugContSet2_Explain">Disabling all 3 policies should turn off suggestions in Settings.</string>
+
+    <string id="SugContSet3">Hide suggested content in Settings no. 3</string>
+    <string id="SugContSet3_Explain">Disabling all 3 policies should turn off suggestions in Settings.</string>
+
+    <string id="FeatureMan">Feature Management</string>
+    <string id="FeatureMan_Explain">Disabling turns off Windows feature management.</string>
+
+    <string id="OEMPreinstallApp">OEM preinstalled apps</string>
+    <string id="OEMPreinstallApp_Explain">Disabling prevents installation of suggested OEM apps.</string>
+
+    <string id="PreinstallApp">Preinstalled apps</string>
+    <string id="PreinstallApp_Explain">Disabling prevents installation of suggested apps by Microsoft.</string>
+
+    <string id="SpotlightLock">Spotlight on lock screen</string>
+    <string id="SpotlightLock_Explain">Disabling turns off Windows Spotlight on lock screen.</string>
+
+    <string id="SpotlightOverLock">Spotlight overlay on lock screem</string>
+    <string id="SpotlightOverLock_Explain">Disabling turns off Windows Spotlight overlay on lock screen.</string>
+
+    <string id="PanelSug">Taskbar suggestions</string>
+    <string id="PanelSug_Explain">Disabling prevents Windows from showing suggestions on the taskbar.</string>
+
+    <string id="SpotlightSlideshow">Spotlight slideshow</string>
+    <string id="SpotlightSlideshow_Explain">Disabling turns off Spotlight slideshow.</string>
+
+    <string id="NewContentDelivery">New Content Delivery Manager features</string>
+    <string id="NewContentDelivery_Explain">Disabling should prevent new Content Delivery Manager features from getting allowed.</string>
+
+    <string id="PreinstallAppEver">Ever install suggested applications</string>
+    <string id="PreinstallAppEver_Explain">Disabling should prevent suggested applications from ever getting installed.</string>
+
+    <string id="AutoInstallApp">Automatic installation of new apps</string>
+    <string id="AutoInstallApp_Explain">Disabling prevents automatic installation of new apps suggested by Microsoft.</string>
+
+    <string id="GetMostWindows">Show reminder to get the most out of Windows</string>
+    <string id="GetMostWindows_Explain">Disabling will prevent showing the notification to get the most out of Windows.</string>
+
+    <string id="TimelineSug">Timeline suggestions</string>
+    <string id="TimelineSug_Explain">Disabling will prevent showing suggestion on the timeline.</string>
+
+    <string id="TailoredExp">Tailored experiences</string>
+    <string id="TailoredExp_Explain">Disabling will prevent Microsoft from suggesting new products based on telemetry.</string>
+    
+    </stringTable>
+	
+	
+  </resources>
+</policyDefinitionResources>

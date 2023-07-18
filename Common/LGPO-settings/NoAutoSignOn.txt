@@ -1,0 +1,6 @@
+; Disable automatic sign on after restart and automatic settings after update
+Computer
+Software\Microsoft\Windows\CurrentVersion\Policies\System
+DisableAutomaticRestartSignOn
+DWORD:1
+

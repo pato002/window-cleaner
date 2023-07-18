@@ -1,0 +1,6 @@
+; Turn off clipboard history, disabled by default as it is a quite useful feature
+Computer
+Software\Policies\Microsoft\Windows\System
+AllowClipboardHistory
+DWORD:0
+

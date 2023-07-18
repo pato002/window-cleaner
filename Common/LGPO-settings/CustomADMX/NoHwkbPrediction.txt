@@ -1,0 +1,6 @@
+; Disable hardware keyboard text prediction
+User
+Software\Microsoft\Input\Settings
+EnableHwkbTextPrediction
+DWORD:0
+

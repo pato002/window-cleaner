@@ -1,0 +1,6 @@
+; Disable WiFi-Sense automatic connecting
+Computer
+Software\Microsoft\PolicyManager\default\WiFi\AllowAutoConnectToWiFiSenseHotspots
+Value
+DWORD:0
+

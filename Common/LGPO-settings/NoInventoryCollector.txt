@@ -1,0 +1,6 @@
+; Turn off Inventory Collector telemetry
+Computer
+Software\Policies\Microsoft\Windows\AppCompat
+DisableInventory
+DWORD:1
+

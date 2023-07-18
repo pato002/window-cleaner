@@ -1,0 +1,6 @@
+; Disable personalized ads
+User
+Software\Policies\Microsoft\Windows\CloudContent
+DisableTailoredExperiencesWithDiagnosticData
+DWORD:1
+

@@ -1,0 +1,6 @@
+; Disable Cortana
+Computer
+Software\Policies\Microsoft\Windows\Windows Search
+AllowCortana
+DWORD:0
+

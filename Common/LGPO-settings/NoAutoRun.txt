@@ -1,0 +1,6 @@
+; Disable AutoRun
+Computer
+Software\Microsoft\Windows\CurrentVersion\Policies\Explorer
+NoAutoRun
+DWORD:1
+

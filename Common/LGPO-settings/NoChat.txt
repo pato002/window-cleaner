@@ -1,0 +1,6 @@
+; Disable Chat icon on taskbar
+Computer
+Software\Policies\Microsoft\Windows\Windows Chat
+ChatIcon
+DWORD:3
+

@@ -1,0 +1,6 @@
+; Disable Xbox Game Bar
+Computer
+Software\Policies\Microsoft\Windows\GameDVR
+AllowGameDVR
+DWORD:0
+

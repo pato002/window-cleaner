@@ -1,0 +1,11 @@
+; Some things to disable showing cloud contents from Microsoft
+Computer
+Software\Policies\Microsoft\Windows\CloudContent
+DisableCloudOptimizedContent
+DWORD:1
+
+Computer
+Software\Policies\Microsoft\Windows\CloudContent
+DisableConsumerAccountStateContent
+DWORD:1
+

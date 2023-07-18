@@ -1,0 +1,6 @@
+; Disable all personalized recommendations
+Computer
+Software\Policies\Microsoft\Windows\CloudContent
+DisableWindowsConsumerFeatures
+DWORD:1
+

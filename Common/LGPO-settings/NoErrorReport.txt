@@ -1,0 +1,11 @@
+; Turn off Windows error reporting
+Computer
+Software\Policies\Microsoft\PCHealth\ErrorReporting
+DoReport
+DWORD:0
+
+Computer
+Software\Policies\Microsoft\Windows\Windows Error Reporting
+Disabled
+DWORD:1
+

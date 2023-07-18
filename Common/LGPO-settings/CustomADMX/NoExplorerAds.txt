@@ -1,0 +1,6 @@
+; Turn off File Explorer ads for OneDrive
+User
+Software\Microsoft\Windows\CurrentVersion\Explorer\Advanced
+ShowSyncProviderNotifications
+DWORD:0
+

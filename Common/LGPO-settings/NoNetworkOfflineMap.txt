@@ -1,0 +1,6 @@
+; Disable unwanted network traffic for offline maps
+Computer
+Software\Policies\Microsoft\Windows\Maps
+AllowUntriggeredNetworkTrafficOnSettingsPage
+DWORD:1
+

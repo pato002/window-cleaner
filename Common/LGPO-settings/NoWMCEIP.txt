@@ -1,0 +1,6 @@
+; Turn off the Windows Messenger Customer Experience Improvement Program
+Computer
+Software\Policies\Microsoft\Messenger\Client
+CEIP
+DWORD:2
+

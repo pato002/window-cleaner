@@ -1,0 +1,6 @@
+; Prevent installation of suggested OEM apps
+User
+Software\Microsoft\Windows\CurrentVersion\ContentDeliveryManager
+OemPreInstalledAppsEnabled
+DWORD:0
+

@@ -1,0 +1,6 @@
+; Turn off Search Companion content file updates from internet
+Computer
+Software\Policies\Microsoft\SearchCompanion
+DisableContentFileUpdates
+DWORD:1
+

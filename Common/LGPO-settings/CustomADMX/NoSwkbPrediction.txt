@@ -1,0 +1,6 @@
+; Disable software keyboard text prediction
+User
+Software\Microsoft\Input\Settings\proc_1\loc_0409\im_1
+Prediction
+DWORD:0
+

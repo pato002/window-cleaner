@@ -1,0 +1,5 @@
+; Prevent showing suggestion on the timeline
+User
+Software\Microsoft\Windows\CurrentVersion\ContentDeliveryManager
+SubscribedContent-353698Enabled
+DWORD:0

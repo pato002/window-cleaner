@@ -1,0 +1,6 @@
+; Prevent installation of suggested apps by Microsoft
+User
+Software\Microsoft\Windows\CurrentVersion\ContentDeliveryManager
+PreInstalledAppsEnabled
+DWORD:0
+

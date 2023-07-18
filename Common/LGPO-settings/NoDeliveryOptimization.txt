@@ -1,0 +1,6 @@
+; Disable Delivery Optimization
+Computer
+Software\Policies\Microsoft\Windows\DeliveryOptimization
+DODownloadMode
+DWORD:99
+

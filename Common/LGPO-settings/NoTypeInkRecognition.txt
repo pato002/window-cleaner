@@ -1,0 +1,6 @@
+; Do not improve inking and typing recognition by sending telemetry
+Computer
+Software\Microsoft\Windows\CurrentVersion\Policies\TextInput
+AllowLinguisticDataCollection
+DWORD:0
+

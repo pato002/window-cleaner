@@ -1,0 +1,5 @@
+; Turn off Spotlight slideshow
+User
+Software\Microsoft\Windows\CurrentVersion\ContentDeliveryManager
+SlideshowEnabled
+DWORD:0

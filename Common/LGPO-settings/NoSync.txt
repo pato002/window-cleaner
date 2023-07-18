@@ -1,0 +1,11 @@
+; Do not sync anything
+Computer
+Software\Policies\Microsoft\Windows\SettingSync
+DisableSettingSync
+DWORD:2
+
+Computer
+Software\Policies\Microsoft\Windows\SettingSync
+DisableSettingSyncUserOverride
+DWORD:0
+

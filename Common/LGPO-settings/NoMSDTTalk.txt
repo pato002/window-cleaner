@@ -1,0 +1,6 @@
+; Turn off communication with support provider in Microsoft Support Diagnostic Tool
+Computer
+Software\Policies\Microsoft\Windows\ScriptedDiagnosticsProvider\Policy
+DisableQueryRemoteServer
+DWORD:0
+

@@ -1,0 +1,6 @@
+; Disable Fast Startup
+Computer
+Software\Policies\Microsoft\Windows\System
+HiberbootEnabled
+DWORD:0
+

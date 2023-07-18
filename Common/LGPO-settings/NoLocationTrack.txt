@@ -1,0 +1,6 @@
+; Disable advanced location tracking
+Computer
+Software\Policies\Microsoft\Windows\LocationAndSensors
+DisableLocationScripting
+DWORD:1
+

@@ -1,0 +1,11 @@
+; Turn off automatic learning of handwriting
+Computer
+Software\Policies\Microsoft\InputPersonalization
+RestrictImplicitTextCollection
+DWORD:1
+
+Computer
+Software\Policies\Microsoft\InputPersonalization
+RestrictImplicitInkCollection
+DWORD:1
+

@@ -1,0 +1,6 @@
+; Disable sending of handwriting error reports
+Computer
+Software\Policies\Microsoft\Windows\HandwritingErrorReports
+PreventHandwritingErrorReports
+DWORD:1
+

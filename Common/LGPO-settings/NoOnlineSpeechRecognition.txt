@@ -1,0 +1,6 @@
+; Turn off online speech recognition services
+Computer
+Software\Policies\Microsoft\InputPersonalization
+AllowInputPersonalization
+DWORD:0
+

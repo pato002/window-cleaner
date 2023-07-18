@@ -1,0 +1,5 @@
+; Prevent Microsoft from suggesting new products based on telemetry
+User
+Software\Microsoft\Windows\CurrentVersion\ContentDeliveryManager
+SubscribedContent-314563Enabled
+DWORD:0
